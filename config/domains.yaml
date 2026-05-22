@@ -1,0 +1,35 @@
+# PAI-BENCH-2-CHANGE: 8 domains with hard min_samples floors and max_fraction
+# caps. v1 over-concentrated on AV/robotics; v2 enforces stratified coverage.
+domains:
+  autonomous_vehicles:
+    min_samples: 200
+    max_fraction: 0.25
+    source_datasets: [OpenDV, nuScenes, Waymo Open]
+  robotics:
+    min_samples: 200
+    max_fraction: 0.25
+    source_datasets: [AgiBot, BridgeData, RoboVQA, EgoExo4D]
+  industrial:
+    min_samples: 200
+    max_fraction: 0.15
+    source_datasets: []     # Requires partnership data
+  construction:
+    min_samples: 200
+    max_fraction: 0.15
+    source_datasets: []
+  agriculture:
+    min_samples: 200
+    max_fraction: 0.10
+    source_datasets: []
+  laboratory:
+    min_samples: 200
+    max_fraction: 0.10
+    source_datasets: [Something-Something-V2]
+  sports_biomechanics:
+    min_samples: 200
+    max_fraction: 0.10
+    source_datasets: []
+  everyday_physics:
+    min_samples: 200
+    max_fraction: 0.15
+    source_datasets: [Kinetics, YouTube-8M]

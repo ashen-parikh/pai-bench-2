@@ -1,0 +1,22 @@
+{
+  "item_id": "u_005_chain_hop1",
+  "video_path": "data/sample/videos/u_005.mp4",
+  "domain": "everyday_physics",
+  "physics_category": "rigid_body",
+  "question": "After the first object enters, what does it collide with?",
+  "choices": [
+    "The blue ball.",
+    "The ramp.",
+    "Another red ball.",
+    "Nothing visible."
+  ],
+  "answer_idx": 1,
+  "requires_temporal": true,
+  "language_prior_score": 0.40,
+  "annotator_agreement": 0.86,
+  "difficulty": 0.4,
+  "discrimination": 1.1,
+  "tags": ["multihop_chain"],
+  "chain_id": "chain_u_005",
+  "hop_index": 1
+}

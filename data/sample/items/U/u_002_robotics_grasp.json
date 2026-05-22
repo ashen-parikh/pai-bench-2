@@ -1,0 +1,20 @@
+{
+  "item_id": "u_002_robotics_grasp",
+  "video_path": "data/sample/videos/u_002_robot.mp4",
+  "domain": "robotics",
+  "physics_category": "contact",
+  "question": "Which finger of the gripper makes contact with the object first?",
+  "choices": [
+    "The thumb-side finger.",
+    "The index-side finger.",
+    "Both fingers simultaneously.",
+    "Neither finger contacts the object."
+  ],
+  "answer_idx": 1,
+  "requires_temporal": true,
+  "language_prior_score": 0.35,
+  "annotator_agreement": 0.88,
+  "difficulty": 0.2,
+  "discrimination": 1.1,
+  "tags": ["grasping", "manipulation"]
+}

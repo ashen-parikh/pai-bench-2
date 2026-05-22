@@ -1,0 +1,13 @@
+{
+  "item_id": "cf_004_deformable",
+  "base_video_path": "data/sample/videos/cf_004.mp4",
+  "base_description": "A foam block is compressed by a robot end-effector and rebounds after release.",
+  "counterfactual_variable": "the_stiffness_of_the_foam",
+  "counterfactual_change": "doubled",
+  "base_outcome": "The foam compresses 4 cm and rebounds fully.",
+  "counterfactual_outcome": "Compression depth is reduced (roughly halved) and the rebound is faster; deformation is less visible because the stiffer material resists compression.",
+  "domain": "robotics",
+  "physics_category": "deformable",
+  "direction_keyword": "less",
+  "magnitude_bin": "much_less"
+}

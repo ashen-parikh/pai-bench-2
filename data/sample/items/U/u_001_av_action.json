@@ -1,0 +1,20 @@
+{
+  "item_id": "u_001_av_action",
+  "video_path": "data/sample/videos/u_001_av.mp4",
+  "domain": "autonomous_vehicles",
+  "physics_category": "rigid_body",
+  "question": "What does the lead vehicle do immediately after the brake lights illuminate?",
+  "choices": [
+    "Comes to a complete stop within 2 car lengths.",
+    "Accelerates and changes lanes to the right.",
+    "Maintains constant speed without changing lanes.",
+    "Reverses for several meters."
+  ],
+  "answer_idx": 0,
+  "requires_temporal": true,
+  "language_prior_score": 0.25,
+  "annotator_agreement": 0.92,
+  "difficulty": 0.1,
+  "discrimination": 1.4,
+  "tags": ["braking", "av"]
+}

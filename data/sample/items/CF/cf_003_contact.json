@@ -1,0 +1,13 @@
+{
+  "item_id": "cf_003_contact",
+  "base_video_path": "data/sample/videos/cf_003.mp4",
+  "base_description": "A sliding block decelerates on a wooden table and comes to rest after 1.2 meters.",
+  "counterfactual_variable": "the_coefficient_of_friction_between_block_and_table",
+  "counterfactual_change": "halved",
+  "base_outcome": "The block stops after 1.2 meters.",
+  "counterfactual_outcome": "The block slides faster and further; stopping distance increases to roughly 2.4 meters because deceleration is approximately halved.",
+  "domain": "everyday_physics",
+  "physics_category": "contact",
+  "direction_keyword": "longer",
+  "magnitude_bin": "much_more"
+}

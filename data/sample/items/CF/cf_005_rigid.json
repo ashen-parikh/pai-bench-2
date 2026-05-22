@@ -1,0 +1,13 @@
+{
+  "item_id": "cf_005_rigid",
+  "base_video_path": "data/sample/videos/cf_005.mp4",
+  "base_description": "A pendulum swings from 30 degrees and reaches a peak height equal to its release height.",
+  "counterfactual_variable": "the_length_of_the_pendulum_string",
+  "counterfactual_change": "doubled",
+  "base_outcome": "Period of oscillation is approximately 2 seconds.",
+  "counterfactual_outcome": "The period increases by a factor of sqrt(2) to roughly 2.8 seconds because the period of a simple pendulum scales with the square root of its length.",
+  "domain": "everyday_physics",
+  "physics_category": "rigid_body",
+  "direction_keyword": "longer",
+  "magnitude_bin": "slightly_more"
+}

@@ -1,0 +1,87 @@
+G:
+  n_items: 1044
+  qa_pairs_per_item: 5
+  quality_score_weight: 0.3
+  # PAI-BENCH-2-CHANGE: domain score weight raised from 0.5 to 0.7;
+  # quality score correlates poorly with physical correctness.
+  domain_score_weight: 0.7
+  judge: hybrid                   # Routes to physics_verifier where tractable
+  # PAI-BENCH-2-CHANGE: 3-MLLM ensemble replaces v1's single Qwen3-VL judge.
+  # The intractable-fallback slot of HybridJudge is constructed from this.
+  ensemble:
+    models: [gpt-4o-mini, gpt-4o, claude-3-5-sonnet-latest]
+    aggregation: median
+    disagreement_threshold: 0.25
+  # Supplementary analytic metrics with no MLLM ceiling, run by PhysicsVerifier
+  # for every tractable scenario alongside the category-specific checks.
+  analytic_physics_metrics:
+    - optical_flow_smoothness
+    - depth_stability
+    - motion_blob_count_stability
+    - pose_validity
+  metrics:
+    - subject_consistency
+    - background_consistency
+    - motion_smoothness
+    - aesthetic_quality
+    - imaging_quality
+    - overall_consistency
+    - domain_score
+
+C:
+  n_items: 600
+  control_signal_types: [depth, edge, segmentation, pose, optical_flow]
+  # PAI-BENCH-2-CHANGE: degradation curve replaces single-point control fidelity.
+  robustness_degradation_levels: [0, 1, 2, 3]
+  metrics:
+    - blur_ssim
+    - edge_f1
+    - depth_si_rmse
+    - mask_miou
+    - visual_quality
+    - generation_diversity
+    - robustness_score
+
+U:
+  # PAI-BENCH-2-CHANGE: scaled from 604+610 to 1800 items across 8 domains
+  # with hard min_per_domain floor; 35% multi-hop.
+  n_items: 1800
+  min_per_domain: 200
+  language_prior_threshold: 0.6
+  annotator_agreement_threshold: 0.80
+  multihop_fraction: 0.35
+  metrics:
+    - accuracy
+    - multihop_chain_accuracy
+    - error_propagation_rate
+    - per_domain_accuracy
+
+CF:
+  # PAI-BENCH-2-CHANGE: entirely new track tests causal world model.
+  n_items: 500
+  physics_categories: [rigid_body, fluid, contact, deformable]
+  metrics:
+    - counterfactual_delta_accuracy
+    - direction_accuracy
+    - magnitude_accuracy
+
+DV:
+  # PAI-BENCH-2-CHANGE: new maintainer-held track validates that benchmark
+  # scores actually predict task performance, closing the Goodhart loop.
+  task_episodes: 75
+  tasks: [robot_grasping, av_trajectory_prediction, physics_sim_fidelity]
+  held_out: true
+  metrics:
+    - spearman_rho_vs_G
+    - spearman_rho_vs_C
+    - spearman_rho_vs_U
+    - spearman_rho_vs_CF
+    - overall_predictive_validity
+
+# PAI-Index weighting; sums to 1.0
+pai_index_weights:
+  G_domain: 0.20
+  C_fidelity: 0.15
+  U_accuracy: 0.30
+  U_multihop: 0.20
+  CF_delta_accuracy: 0.15

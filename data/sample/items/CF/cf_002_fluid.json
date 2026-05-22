@@ -1,0 +1,13 @@
+{
+  "item_id": "cf_002_fluid",
+  "base_video_path": "data/sample/videos/cf_002.mp4",
+  "base_description": "Water flows out of a beaker into a graduated cylinder over 5 seconds.",
+  "counterfactual_variable": "the_viscosity_of_the_fluid",
+  "counterfactual_change": "doubled",
+  "base_outcome": "The cylinder fills to 100 mL within 5 seconds.",
+  "counterfactual_outcome": "The cylinder fills more slowly because higher viscosity reduces flow rate; final fill level after 5 seconds would be lower than 100 mL.",
+  "domain": "laboratory",
+  "physics_category": "fluid",
+  "direction_keyword": "slower",
+  "magnitude_bin": "much_less"
+}

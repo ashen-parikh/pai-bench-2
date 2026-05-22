@@ -1,0 +1,20 @@
+{
+  "item_id": "u_003_bad_language_prior",
+  "video_path": "data/sample/videos/u_003.mp4",
+  "domain": "everyday_physics",
+  "physics_category": "rigid_body",
+  "question": "Does a dropped object accelerate toward the ground because of gravity?",
+  "choices": [
+    "Yes, gravity pulls it downward.",
+    "No, it floats upward.",
+    "It moves horizontally without acceleration.",
+    "It vanishes mid-air."
+  ],
+  "answer_idx": 0,
+  "requires_temporal": false,
+  "language_prior_score": 0.75,
+  "annotator_agreement": 0.95,
+  "difficulty": -2.8,
+  "discrimination": 0.2,
+  "tags": ["language_prior_violation"]
+}

@@ -1,0 +1,23 @@
+# Two top-level taxonomies for physical reasoning ability.
+physical_common_sense:
+  space:
+    - object_relations
+    - spatial_interactions
+    - environmental_context
+  time:
+    - action_recognition
+    - event_sequencing
+    - causality
+  physical_world:
+    - physical_principles
+    - object_properties
+    - law_adherence
+
+embodied_reasoning:
+  action_effects:
+    - task_completion_verification
+    - next_action_prediction
+  physical_constraints:
+    - action_affordance
+    - stability_reasoning
+    - safety_feasibility

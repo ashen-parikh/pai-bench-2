@@ -1,0 +1,13 @@
+{
+  "item_id": "cf_001_rigid",
+  "base_video_path": "data/sample/videos/cf_001.mp4",
+  "base_description": "A ball is dropped onto a flat surface from a height of 1 meter and bounces twice before resting.",
+  "counterfactual_variable": "the_mass_of_the_ball",
+  "counterfactual_change": "doubled",
+  "base_outcome": "The ball bounces twice before resting.",
+  "counterfactual_outcome": "The ball bounces with approximately the same height because, in a vacuum, bounce height is independent of mass; with air resistance the bounce would be very slightly higher because air drag is less significant.",
+  "domain": "everyday_physics",
+  "physics_category": "rigid_body",
+  "direction_keyword": "same",
+  "magnitude_bin": "same"
+}

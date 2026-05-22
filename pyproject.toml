@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pai-bench-2"
+version = "2.0.0"
+description = "PAI-Bench 2: Physical AI benchmark for video generative and multimodal models"
+requires-python = ">=3.10"
+readme = "README.md"
+authors = [{ name = "PAI-Bench maintainers" }]
+license = { text = "Apache-2.0" }
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "transformers>=4.40.0",
+    "accelerate",
+    "pydantic>=2.0",
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "scikit-image",
+    "opencv-python",
+    "pillow",
+    "imageio",
+    "imageio-ffmpeg",
+    "lpips",
+    "click",
+    "rich",
+    "pyyaml",
+    "datasets",
+    "huggingface_hub",
+    "openai",
+    "anthropic",
+    "tqdm",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff"]
+
+[project.scripts]
+pai-bench = "pai_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pai_bench*"]
